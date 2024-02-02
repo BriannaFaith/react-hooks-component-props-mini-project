@@ -7,8 +7,7 @@ function About({image="https://via.placeholder.com/215",about}) {
       <aside>
         <img
           src={image}
-          alt="blog
-    logo"
+          alt="blog logo"
         />
         <p>{about}</p>
       </aside>

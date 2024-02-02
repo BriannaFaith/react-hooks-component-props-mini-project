@@ -1,24 +1,11 @@
-import React from "react";
-
-function Article({post,date='January 1, 1970', preview, minutes}) {
-  let readTimeEmoji='';
-  if(minutes<30){
-  const coffeeCups = Math.ceil(minutes / 5);
-  readTimeEmoji = "☕️".repeat(coffeeCups);
-
-}else if(minutes>=30){
-  const coffeeCups = Math.ceil(minutes / 10);
-  readTimeEmoji = "🍱".repeat(coffeeCups);
+import React from "react"
+const Article=({title , date= "January 1, 1970"  , preview}) =>{
+    return(
+        <article>
+            <h3>{title}</h3>
+            <small>{date}</small>
+            <p>{preview}</p>
+        </article>
+    )
 }
-  return (
-    <article>
-      <h3>{post} </h3>
-      <small>
-        {date}, <span> {minutes} {readTimeEmoji} min read</span>
-      </small>
-      <p>{preview}</p>
-    </article>
-  );
-}
-
-export default Article;
+export default Article
